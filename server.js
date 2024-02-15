@@ -7,6 +7,12 @@ const port = 5020;
 
 app.use(cors()); // Enable CORS for all routes
 
+const corsOptions = {
+  origin: 'https://admin-monitoring-4f918.web.app',
+};
+
+app.use(cors(corsOptions));
+
 // MongoDB Atlas connection URI
 const uri = 'mongodb+srv://user1:root@initialload.qj5mr8z.mongodb.net/joborr-db?retryWrites=true&w=majority';
 
